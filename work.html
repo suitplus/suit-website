@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>省实极光工作室</title>
+		<link href="css/1bootstrap.min.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<iframe id="if" src="loading.html" style="width: 100vw; height: 100vh;" scrolling="no" frameborder="0"></iframe>
+		<!-- 最大的div -->
+		<div class="container-fluid p-0" id="main">
+			<!-- 第一行 包括pass标和navbar -->
+			<div class="row">
+				<div class="col-12">
+					<nav class="navbar navbar-expand-lg navbar-light bg-primary ">
+					  <div class="container-fluid">
+					    <a class="navbar-brand" href="index.html"><img src="img/pass+logo.png" class="rounded float-start" alt="" style="width: 50px;"></a>
+					    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					      <span class="navbar-toggler-icon"></span>
+					    </button>
+					    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item dropdown">
+							    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">部门介绍</a>
+							    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+							      <li><a class="dropdown-item" href="#">影像组</a></li>
+							      <li><a class="dropdown-item" href="#">视频组</a></li>
+								  <li><a class="dropdown-item" href="#">信息组</a></li>
+								  <li><a class="dropdown-item" href="#">音效组</a></li>
+								  <li><a class="dropdown-item" href="#">平面设计组</a></li>
+							      <li><hr class="dropdown-divider"></li>
+							      <li><a class="dropdown-item" href="#">Something else here</a></li>
+							    </ul>
+							  </li>
+					        <li class="nav-item">
+					          <a class="nav-link active text-light" aria-current="page" href="work.html">部门工作</a>
+					        </li>
+					        <li class="nav-item">
+					          <a class="nav-link text-light" href="adv.html">加入我们</a>
+					        </li>
+							</ul>
+					      <form class="d-flex" role="search">
+					        <input class="form-control me-2" type="search" placeholder="想知道什么？" aria-label="Search">
+					        <button class="btn btn-outline-success" type="submit">Search</button>
+					      </form>
+					    </div>
+					  </div>
+					
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<ul class="list-group list-group-flush p-0">
+						<li class="list-group-item p-0"><img src="img/0.png" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x1.jpg" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x2.jpg" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x3.jpg" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x4.jpg" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x5.jpg" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x6.png" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+						<li class="list-group-item p-0"><img src="img/x7.png" class="d-block" alt="..." style="width: 100%; height: auto;"></li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#main").hide();
+	})
+	
+	function sleep (time) {
+	  return new Promise((resolve) => setTimeout(resolve, time));
+	}
+	window.onload = function(){
+		sleep(1000).then(() => {
+		    $("#if").fadeOut(1000);
+			$("#main").fadeIn(2000);
+		})
+	};
+</script>

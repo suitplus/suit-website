@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>省实极光工作室</title>
+		<link href="css/1bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="p-0" style="position: absolute; left: calc(50% - 200px); top: calc(50% - 100px); width: 400px; height: auto;" align="center">
+			<div class="" style="" align="center">
+				<img id="img" src="img/pass+logo.png" class="rounded" alt="" style="width: 100px;">
+			    <h1 id="h1">省实极光工作室</h1>
+			    <p id="p1">广东实验中学独立学生信息媒体工作室</p>
+				<p id="p2">正在为您载入...</p>
+				<p id="p3">看来网络出了点状况...</p>
+				<p id="p4">好吧它又罢工了...</p>
+			</div>
+			<div class="spinner-border" role="status" id="spin">
+			  <span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+	function sleep (time) {
+	  return new Promise((resolve) => setTimeout(resolve, time));
+	}
+	window.onload = function(){
+		$("#img").hide();
+		$("#h1").hide();
+		$("#p1").hide();
+		$("#p2").hide();
+		$("#p3").hide();
+		$("#p4").hide();
+		$("#spin").hide();
+		$("#img").fadeIn(1000);
+		sleep(250).then(() => {
+		    $("#h1").fadeIn(1000);
+		})
+		sleep(500).then(() => {
+		    $("#p1").fadeIn(1000);
+		})
+		
+		sleep(1000).then(() => {
+		    $("#spin").fadeIn(1000);
+		})
+		
+		sleep(3000).then(() => {
+			$("#p1").fadeOut(500);
+		})
+		
+		sleep(3500).then(() => {
+		    $("#p2").fadeIn(1500);
+		})
+		
+		sleep(10000).then(() => {
+			$("#p2").fadeOut(500);
+		})
+		
+		sleep(10500).then(() => {
+		    $("#p3").fadeIn(1500);
+		})
+		
+		sleep(15000).then(() => {
+			$("#p3").fadeOut(500);
+		})
+		
+		sleep(15500).then(() => {
+		    $("#p4").fadeIn(1500);
+		})
+	};
+	
+</script>
